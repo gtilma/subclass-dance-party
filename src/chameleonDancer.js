@@ -18,3 +18,7 @@ ChameleonDancer.prototype.getColor = function(){
   }
   return color;
 };
+
+ChameleonDancer.prototype.lineUp = function(){
+  this.$node.css('top', 600);
+};

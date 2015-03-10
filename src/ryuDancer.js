@@ -26,3 +26,7 @@ RyuDancer.prototype.spin = function(){
   $(this).css('transform', transformValue);
   return transformValue;
 };
+
+RyuDancer.prototype.lineUp = function(){
+  this.$node.css('top', 100);
+};

@@ -16,3 +16,7 @@ BlinkyDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
 };
+
+BlinkyDancer.prototype.lineUp = function(){
+  this.$node.css('top', 800);
+};
