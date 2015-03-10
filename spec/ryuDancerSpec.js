@@ -1,11 +1,11 @@
 describe("ryuDancer", function() {
   var ryuDancer;
-  var timeBetweenSteps = 100;
+  var timeBetweenSteps = 5000;
   var clock;
 
   beforeEach(function() {
-    clock = sinon.useFaceTimers();
-    ryuDancer = new ChameleonDancer(500, 500, timeBetweenSteps);
+    clock = sinon.useFakeTimers();
+    ryuDancer = new RyuDancer(500, 500, timeBetweenSteps);
   });  
 
   it("should ______", function(){
