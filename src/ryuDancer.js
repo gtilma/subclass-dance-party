@@ -1,5 +1,14 @@
-var RyuDancer = function(top, left, timeBetweenSteps){
-  Dancer.call(this, top, left, timeBetweenSteps);
+var RyuDancer = function(top, left){
+  Dancer.call(this, top, left, 5000);
+  var settings = {
+    'background-image': "url('ryu.png')",
+    border: 'none',
+    'border-radius': 'none',
+    height: 229,
+    width: 144
+  };
+
+  this.$node.css(settings);
 };
 
 RyuDancer.prototype = Object.create(Dancer.prototype);
@@ -7,5 +16,5 @@ RyuDancer.prototype.constructor = RyuDancer;
 
 RyuDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
-  this.$node.css('background-image');
+  Dancer.prototype.setPosition.call(this, $("body").height() * Math.random(), $("body").width() * Math.random())
 };
