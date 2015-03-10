@@ -5,7 +5,8 @@ var RyuDancer = function(top, left){
     border: 'none',
     'border-radius': 'none',
     height: 229,
-    width: 144
+    width: 144,
+    transform: 'rotate(0deg)'
   };
   this.$node.css(settings);
   this.$node.on('mouseover', this.spin);
@@ -23,4 +24,5 @@ RyuDancer.prototype.spin = function(){
   var degree = Math.floor(Math.random() * 360);
   var transformValue = 'rotate(' + degree + 'deg)';
   $(this).css('transform', transformValue);
+  return transformValue;
 };

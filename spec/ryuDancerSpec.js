@@ -19,8 +19,9 @@ describe("ryuDancer", function() {
   });
   
   it("should spin on mouseover", function(){
-    expect(ryuDancer.$node.css('transform')).to.not.equal('rotate(180deg)');
-    // mouseover
-    expect(ryuDancer.$node.css('transform')).to.equal('rotate(180deg)');
+    var degree = ryuDancer.$node.css('transform');
+    var node = ryuDancer.$node;
+    node.trigger('mouseover');
+    expect(ryuDancer.$node.css('transform')).to.not.equal(degree);
   });
 });
