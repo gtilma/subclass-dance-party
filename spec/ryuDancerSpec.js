@@ -8,15 +8,19 @@ describe("ryuDancer", function() {
     ryuDancer = new RyuDancer(500, 500, timeBetweenSteps);
   });  
 
-  it("should ______", function(){
-    expect(ryuDancer_____).to._____;
+  it("should have a jQuery $node object", function(){
+    expect(ryuDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it("should ______", function(){
-    expect(ryuDancer_____).to._____;
+  it("should move every 5 seconds", function(){
+    var left = ryuDancer.$node.css('left');
+    ryuDancer.step();
+    expect(ryuDancer.$node.css('left')).to.not.equal(left);
   });
   
-  it("should ______", function(){
-    expect(ryuDancer_____).to._____;
+  it("should spin on mouseover", function(){
+    expect(ryuDancer.$node.css('transform')).to.not.equal('rotate(180deg)');
+    // mouseover
+    expect(ryuDancer.$node.css('transform')).to.equal('rotate(180deg)');
   });
 });

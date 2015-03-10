@@ -7,8 +7,9 @@ var RyuDancer = function(top, left){
     height: 229,
     width: 144
   };
-
   this.$node.css(settings);
+  this.$node.addClass('ryu');
+  $('.ryu').on('mouseover', this.spin);
 };
 
 RyuDancer.prototype = Object.create(Dancer.prototype);
@@ -18,3 +19,7 @@ RyuDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
   Dancer.prototype.setPosition.call(this, $("body").height() * Math.random(), $("body").width() * Math.random())
 };
+
+RyuDancer.prototype.spin = function(){
+  $(this).css('transform', 'rotate(180deg)');
+}
