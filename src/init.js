@@ -36,5 +36,21 @@ $(document).ready(function(){
       window.dancers[i].lineUp();
     }
   });
+
+  function(){
+    var y1, x1, y2, x2, between;
+    for (var i = 0; i < window.dancers.length - 1; i++) {
+      x1 = window.dancers[i].$node.css('left')
+      x1 = +x1.substring(0, x1.length - 2)
+      y1 = window.dancers[i].$node.css('top')
+      y1 = +y1.substring(0, y1.length - 2)
+      x2 = window.dancers[i + 1].$node.css('left')
+      x2 = +x2.substring(0, x2.length - 2)
+      y2 = window.dancers[i + 1].$node.css('top')
+      y2 = +y2.substring(0, y2.length - 2)
+      between = Math.sqrt(Math.pow(Math.abs(x1 - x2), 2) + Math.pow(Math.abs(y1 - y2), 2))
+      // if between matches some condition, do something crazy
+    }
+  }();
 });
 
